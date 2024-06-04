@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import TopBar from "../components/TopBar";
-import Navbar from "@/components/Navbar";
+import Navbar from "../components/Navbar";
 import { Inter } from "next/font/google";
-import PalmierLandingPageFooter from "@/components/PalmierLandingPageFooter";
+import PalmierLandingPageFooter from "../components/PalmierLandingPageFooter";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });

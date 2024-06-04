@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import PalmierLandingPage1 from "@/components/landing_page/PalmierLandingPage1";
-import PalmierLandingPage2 from "@/components/landing_page/PalmierLandingPage2";
-import PalmierLandingPage3 from "@/components/landing_page/PalmierLandingPage3";
+import PalmierLandingPage1 from "./PalmierLandingPage1";
+import PalmierLandingPage2 from "./PalmierLandingPage2";
+import PalmierLandingPage3 from "./PalmierLandingPage3";
 
 const PalmierLandingPage: React.FC = () => {
   return (
