@@ -5,16 +5,37 @@ import Image from "next/image";
 
 import { imageReducer } from "./utils";
 
-export async function getStaticProps() {
-  const res = await fetch("https://victorious-presence-b58d5caead.strapiapp.com/api/projects?populate=*");
-  const data = await res.json();
-  return { props: { data } };
-}
+// export async function getStaticProps() {
+//   const res = await fetch("https://victorious-presence-b58d5caead.strapiapp.com/api/projects?populate=*");
+//   const data = await res.json();
+//   return { props: { data } };
+// }
 
 async function getData() {
-  const res = await fetch("https://victorious-presence-b58d5caead.strapiapp.com/api/projects?populate=*");
+  // Get the API token from environment variables
+  const apiToken = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
+
+  // Check if the token is available
+  if (!apiToken) {
+    throw new Error('API token is not defined in the environment variables');
+  }
+
+  // Make the fetch request with the Authorization header
+  const res = await fetch("https://victorious-presence-b58d5caead.strapiapp.com/api/projects?populate=*", {
+    headers: {
+      'Authorization': `Bearer ${apiToken}`
+    }
+  });
+
+  // Check if the response is successful
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+
+  // Parse and return the JSON data
   return await res.json();
 }
+
 
 async function Dummy() {
   const results = await getData();
