@@ -6,13 +6,13 @@ import Image from "next/image";
 import { imageReducer } from "./utils";
 
 export async function getStaticProps() {
-  const res = await fetch("http://127.0.0.1:1337/api/projects?populate=*");
+  const res = await fetch("https://victorious-presence-b58d5caead.strapiapp.com/api/projects?populate=*");
   const data = await res.json();
   return { props: { data } };
 }
 
 async function getData() {
-  const res = await fetch("http://127.0.0.1:1337/api/projects?populate=*");
+  const res = await fetch("https://victorious-presence-b58d5caead.strapiapp.com/api/projects?populate=*");
   return await res.json();
 }
 
@@ -20,7 +20,7 @@ async function Dummy() {
   const results = await getData();
   //console.log(results.data[0].attributes.Title);
   //console.log(results.data[1].attributes.cover.data.attributes.name);
-  var image_api = "http://127.0.0.1:1337";
+  var image_api = "https://victorious-presence-b58d5caead.strapiapp.com";
   const image =
     image_api + results.data[0].attributes.cover.data.attributes.url;
 

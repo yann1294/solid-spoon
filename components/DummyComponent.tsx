@@ -7,7 +7,7 @@ import axios from "axios";
 import type { InferGetStaticPropsType, GetStaticProps } from "next";
 
 export const getStaticProps = (async (context: any) => {
-  const res = await fetch("http://127.0.0.1:1337/api/projects?populate=*");
+  const res = await fetch("https://victorious-presence-b58d5caead.strapiapp.com/api/projects?populate=*");
   console.log(res);
   const data = await res.json();
   console.log(data);
