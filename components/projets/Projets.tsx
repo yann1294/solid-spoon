@@ -9,7 +9,7 @@ import ProjetSolutions from "./ProjetSolutions";
 const Projets = () => {
   return (
     <div>
-      {/*<Dummy /> */}
+      <Dummy />
       <ProjetSolutions />
       <ProjetIntro />
       <ProjetDetaille />
