@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Projets from "@/components/projets/Projets";
+import Projets from "../../components/projets/Projets";
 
 const Page: React.FC = () => {
   return (
