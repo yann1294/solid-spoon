@@ -1,0 +1,15 @@
+.my_img{
+    width: 550px;
+    height: 500px;
+    background-color: cadetblue;
+    border: blue;
+}
+.para1{
+    margin-bottom: 50px;
+    font-size: 8px;
+}
+
+.para3{
+    margin-bottom: 10px;
+    font-size: 8px;
+}
